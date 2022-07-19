@@ -670,6 +670,9 @@ void output_O_nm(double ****O, const char *output_name, int ParallelHDF5, double
     printf("\nThe calculation was normally finished.\n");fflush(stdout);
   }
 
+  Make_FracCoord(argv[1]);
+  Merge_LogFile(argv[1]);
+
   /* if OpenMX is called by MPI_spawn. */
 
   if (MPI_spawn_flag==1){
